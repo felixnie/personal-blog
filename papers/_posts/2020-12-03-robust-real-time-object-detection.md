@@ -2,8 +2,8 @@
 layout: post
 title: Robust Real-time Object Detection (ICCV2001)
 description: >
-  *Robust Real-time Object Detection* on ICCV 2001 is proposed by Paul Viola and Michael Jones, which introduced a general framework for object detection. The paper, also named as *Robust Real-time Face Detection* and *Rapid Object Detection using a Boosted Cascade of Simple Features* (on CVPR 2001), has over 15,000 citations.
-image: https://miro.medium.com/max/875/1*yEAd5GgzwVQFDY7X5zpnFQ.jpeg
+  *Robust Real-time Object Detection* on ICCV 2001 is proposed by Paul Viola and Michael Jones, which introduced a general framework for object detection. The paper, also named *Robust Real-time Face Detection* and *Rapid Object Detection using a Boosted Cascade of Simple Features* (on CVPR 2001), has over 15,000 citations.
+image: 
 sitemap: false
 ---
 
@@ -33,10 +33,9 @@ Figure 1
 
 The sum of the pixels which lie within the black regions is subtracted from the sum of pixels in the white regions. The mask set consists of 2 two-rectangle edge features, 2 three-rectangle line features, and a four-rectangle feature, which can be seen as a diagonal line feature. They are called Haar-like since the elements are all +1/-1, just like the square-shaped functions in Haar wavelet.
 
-<a id="figure-2"></a>
-
 They are effective for tasks like face detection. Regions like eye sockets and cheeks usually have a distinctly bright and dark boundary, while nose and mouse can be considered as lines with a specific width.
 
+<a id="figure-2"></a>
 <p align="center">
   <img width="60%" height="60%" src="https://docs.opencv.org/3.4/haar.png">
 </p>
@@ -129,10 +128,9 @@ Figure 4 AdaBoost Algorithm
 
 A weak classifier is chosen on each iteration. And the falsely classified samples are given higher weights in the next iteration. The next classifier will pay extra attention to the misclassified training samples. Combining the weak classifiers, in this case, the low-level boundaries, we have a high-level boundary, which is considered as a strong classifier.
 
-<a id="figure-5"></a>
-
 People always describe AdaBoost as **a Forest of Stumps**. The analogy just tells the exact nature of AdaBoost. AdaBoost means **Adaptive Boosting**. There are many boosting algorithms. Remember the random forest binary classifier? Each of the trees is built with random samples and several features from the full dataset. Then the new sample is fed into each decision tree, being classified, and collect the labels to count the final result. During the training process, the order doesn't matter at all, and all the trees are equal. In the forest of stumps, all the trees are 1-level, calling stumps (only root and 2 leaves in binary classification problems). Each stump is a weak classifier using only 1 feature from the extracted features. First, we find the best stump with the lowest error. It will suck. A weak classifier is only expected to function slightly better than randomly guessing. It may only classify the training data correctly 51% of the time. The next tree will then emphasize the misclassified samples and will be given a higher weight if the last tree doesn't go well.
 
+<a id="figure-5"></a>
 <p align="center">
   <img width="80%" height="80%" src="https://www.codeproject.com/KB/AI/4114375/cdac8dae-bfa9-42c7-88b5-99cfbced7fec.Png">
 </p>
@@ -140,21 +138,21 @@ People always describe AdaBoost as **a Forest of Stumps**. The analogy just tell
 Figure 5
 {:.figcaption}
 
-The algorithm from the [paper](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf) can be summarized as above. It's adequate for a basic implementation of the algorithm, like this [project](https://github.com/Simon-Hohberg/Viola-Jones). In spite of this, there are still some datails merit the discussion.
+The algorithm from the [paper](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf) can be summarized as above. It's adequate for a basic implementation of the algorithm, like this [project](https://github.com/Simon-Hohberg/Viola-Jones). In spite of this, there are still some details that merit the discussion.
 
 **⚠️ Nitty-gritty alert!**
 
 #### 1.3.1 Decision Stump by Exhaustive Search
 
 > We can format this step as:  
-> **Input:** the $$f$$-th feature of all $$n$$ samples  
+> **Input:** the $$f$$-th feature of all $$n$$ samples, the weights of all samples
 > **Output:** a weak classifier $$h_t(x)$$
 
-Now we know how to build the combination of weak classifiers. But the optimal decision stump search is always left out in some projects like [this](https://github.com/Simon-Hohberg/Viola-Jones), and even in the [paper](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf) itself.
+Now we know how to build a combination of weak classifiers. But the optimal decision stump search is always left out in some projects like [this](https://github.com/Simon-Hohberg/Viola-Jones), and even in the [paper](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf) itself.
 
 Luckily, an [explanation](https://www.ipol.im/pub/art/2014/104/article.pdf) I found solved all my problems. The resources mentioned in this post are listed in the [reference](#15-reference) section.
 
-A single decision stump is constructed with 4 parameters: threshold, toggle, error and margin.
+A single decision stump is constructed with 4 parameters: threshold, toggle, error, and margin.
 
 | Parameter | Symbol | Definition |
 |-----------|--------|------------|
@@ -169,7 +167,7 @@ First, since we need to compute the margin $$\Mu$$, the gap between each pair of
 
 $$x_{f_1} \leq x_{f_2} \leq x_{f_3} \leq ... \leq x_{f_n}$$
 
-$$x_{f_n}$$ is the largest value among the $$f$$-th feature of all $$n$$ samples. It deosn't mean the $$n$$-th sample since they are sorted.
+$$x_{f_n}$$ is the largest value among the $$f$$-th feature of all $$n$$ samples. It doesn't mean the $$n$$-th sample since they are sorted.
 
 In the initialization step, $$\tau$$ is set to be smaller than the smallest feature value $$x_{f_1}$$. Margin $$\Mu$$ is set to 0 and error $$\Epsilon$$ is set to an arbitrary number larger than the upper bound of the empirical loss.
 
@@ -181,7 +179,7 @@ And the margin is computed as:
 
 $$\hat{\Mu} = x_{f_{j+1}} - x_{f_j}$$
 
-We compute the error $$\hat{\Epsilon}$$ by collecting the weight $w_{f_j} of the misclassified samples. Since the toggle is not decided yet, we have to calculate $$error_+$$ and $$error_-$$ for both situations. If $$error_+ < error_-$$, then we decide that toggle $$\hat{\Tau} = +1$$, otherwise $$\hat{\Tau} = -1$$. Finally, the tuple of parameters with smallest error is kept as $$\left\{ \tau, \Tau, \Epsilon, \Mu \right\}$$.
+We compute the error $$\hat{\Epsilon}$$ by collecting the weight $$w_{f_j}$$ of the misclassified samples. Since the toggle is not decided yet, we have to calculate $$error_+$$ and $$error_-$$ for both situations. If $$error_+ < error_-$$, then we decide that toggle $$\hat{\Tau} = +1$$, otherwise $$\hat{\Tau} = -1$$. Finally, the tuple of parameters with smallest error is kept as $$\left\{ \tau, \Tau, \Epsilon, \Mu \right\}$$.
 
 ![Full-width image](/assets/img/img-ee5731/adaboost-algorithm-4.png){:.lead width="800" height="100" loading="lazy"}
 
@@ -191,8 +189,15 @@ Figure 6 Decision Stump by Exhaustive Search
 #### 1.3.2 Selecting the Best Stump
 
 > We can format this step as:  
-> **Input:** $$d$$ stumps for given features  
+> **Input:** $$d$$ stumps for $$d$$ given features  
 > **Output:** the best decision stump
+
+During each training round $$t$$ in AdaBoost, a weak classifier $$h_t(x)$$ is selected. For each feature, we utilize the method in [1.3.1](#131-decision-stump-by-exhaustive-search) to decide on the best parameter set for the decision stump.
+
+$$1 \leq t \leq T$$, $$T$$ is the total number of weak classifiers, usually we let $$T$$ be the full length of the feature vector.
+{:.note}
+
+The best stump among all the stumps should have the lowest error $$\Epsilon$$. We select the one with the largest margin $$\Mu$$ when the errors happen to be the same. It then becomes the $$t$$-th weak classifier. The weights assigned to all $$n$$ samples will be adjusted, and thus the exhaustive search should be carried out again using the updated weights. The idea behind this part is quite straightforward.
 
 ![Full-width image](/assets/img/img-ee5731/adaboost-algorithm-5.png){:.lead width="800" height="100" loading="lazy"}
 
@@ -206,12 +211,38 @@ Figure 8 AdaBoost Algorithm with Optimal $$h_t(x)$$
 
 ### 1.4 Fasten Classification: Cascade Classifier
 
+> We can format this step as:  
+> **Input:** samples and features  
+> **Output:** a cascade classifier, each step consists of several weak classifiers
+
+As described in the subtitle, the main goal of building the cascade is to accelerate the estimation when dealing with a new input image, say, 384x288 (preset in the paper). Most of the sub-windows used to detect potential faces will have negative output. We hope to drop out those with backgrounds and non-faces as soon as possible.
+
+Some will call this an **attentional cascade**. We hope to pay more attention to those sub-windows that might have faces inside them.
+
+Our goal can be summarized as:
+
+1. Weed out non-faces early on to reduce calculation.
+2. Pay more attention to those **hard** samples since negative samples are dropped in advance.
+
 <p align="center">
   <img width="60%" height="60%" src="https://www.researchgate.net/profile/Mahdi_Rezaei6/publication/233375515/figure/fig1/AS:341180333215748@1458355138644/The-structure-of-the-Viola-Jones-cascade-classifier.png">
 </p>
 
 Figure 9
 {:.figcaption}
+
+The decision cascade is formed using a series of stages, each consists of several weak classifiers. Recall the strong classifier we build in [1.3](#13-feature-selection-adaboost), $$h(x)$$ is the sum of weighted votes of all the weak classifiers/stumps. This scheme is already sufficient to achieve face detection. Some [projects](https://github.com/Simon-Hohberg/Viola-Jones) just use this form of strong classifier instead of an attentional cascade. But the first goal reminds us that we shouldn't use all $$T$$ weak classifiers to deal with every detector, which will be extremely time-consuming.
+
+At each stage, or some may call it a layer or classifier, we can use only part of the weak classifiers, as long as a certain false positive rate and detection rate can be guaranteed. In the next stage, only the positive and false-positive samples (the **hard** samples) are used to train the classifier. All we need to do is set up the **maximum acceptable false-positive rate** and the **minimum acceptable detection rate** per layer, as well as the **overall target false positive rate**.
+
+<p align="center">
+  <img width="60%" height="60%" src="https://miro.medium.com/max/875/1*1EFSD2Fme-OIXRf5RAB_rQ.png">
+</p>
+
+Figure 10
+{:.figcaption}
+
+We iteratively add more features to train a layer so that we can achieve higher detection rate and lower false-positive rate, till the requirements are satisfied. Then we move to next layer. We obtain the final attentianal cascade once the overall target false positive rate is low enough.
 
 Hope my interpretation can help you understand the algorithm.
 
@@ -224,4 +255,4 @@ Hope my interpretation can help you understand the algorithm.
 5. [An Analysis of the Viola-Jones Face Detection Algorithm](https://www.ipol.im/pub/art/2014/104/article.pdf)
 6. [AdaBoost, Clearly Explained - YouTube](https://www.youtube.com/watch?v=LsK-xG1cLYA&ab_channel=StatQuestwithJoshStarmer)
 7. [GitHub - Simon-Hohberg/Viola-Jones: Python implementation of the face detection algorithm by Paul Viola and Michael J. Jones](https://github.com/Simon-Hohberg/Viola-Jones)
-8. [Understanding and Implementing Viola-Jones (Part Two) | by Anmol Parande | Data Driven Investor | Medium](https://medium.com/datadriveninvestor/understanding-and-implementing-viola-jones-part-two-97ae164ee60f)
+8. [Understanding and Implementing Viola-Jones (Part Two)](https://medium.com/datadriveninvestor/understanding-and-implementing-viola-jones-part-two-97ae164ee60f)

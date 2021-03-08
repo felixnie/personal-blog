@@ -18,16 +18,14 @@ The EE5731 Visual Computing module provides us with knowledge on topics includin
    2. Fasten Convolution Process: Integral Image
    3. Feature Selection: AdaBoost
    4. Fasten Classification: Cascade Classifier
-2. HOG (Histogram of Oriented Gradients) Features
-3. SIFT (Scale Invariant Feature Transform) Algorithm <span style="color:blue">**Under Construction**</span>
-   1. Scale Space Extrema - DoG (Difference of Gaussian)
-   2. Keypoint Localization
-   3. Contrast Threshold
-   4. Edge Threshold
-   5. Orientation Assignment
-   6. SIFT Descriptor
-   7. Homography
-   8. RANSAC
+2. Histogram of Oriented Gradients (HOG) Features and Human Detection
+3. [Scale Invariant Feature Transform (SIFT) Algorithm and Image Stitching]({{ site.baseurl }}{% link modules/_posts/2020-12-04-ee5731-2-panoramic-image-stitching.md %}) <span style="color:blue">**Under Construction**</span>
+   1. Scale Space Extrema: Difference of Gaussian (DoG)
+   2. Keypoint Localization: Taylor Expansion
+   3. Orientation Assignment
+   4. Keypoint Descriptor
+   5. Homography
+   6. RANSAC
 4. Camera Parameters <span style="color:blue">**Under Construction**</span>
    1. Forward Propagation
    2. Backward Propagation
