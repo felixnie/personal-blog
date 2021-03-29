@@ -20,7 +20,6 @@ JEKYLL_ENV=production bundle exec jekyll build
 ### Update Hydejack
 ```
 bundle update jekyll-theme-hydejack
-
 ```
 
 ### If you're using WSL
