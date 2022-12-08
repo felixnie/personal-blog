@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Remote Frequency Response Analyzer
+title: Smart Home Monitor with Gesture Recognition
 description: >
    A small project for a contest, mainly designed by teammate [Hsury](https://kagamiz.com/).
 sitemap: true
