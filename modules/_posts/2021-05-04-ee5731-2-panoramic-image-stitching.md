@@ -14,7 +14,7 @@ tags: [modules]
 
 ## 3. Scale Invariant Feature Transform (SIFT) Algorithm
 
-It's the third feature detection algorithm introduced in the module EE5731. Here is an overview and the contents of the module: [An Overview of EE5731 Visual Computing]({{ site.baseurl }}{% link modules/_posts/2020-12-03-ee5731-0-an-overview-of-visual-computing.md %}).
+It's the third feature detection algorithm introduced in the module EE5731. Here is an overview and the contents of the module: [An Overview of EE5731 Visual Computing]({{ site.baseurl }}{% link modules/_posts/2021-05-09-ee5731-0-an-overview-of-visual-computing.md %}).
 
 The paper [*Distinctive Image Features from Scale-Invariant Keypoints*](https://people.eecs.berkeley.edu/~malik/cs294/lowe-ijcv04.pdf) was first published in 1999 and attained perfection in 2004, by David Lowe from UBC. Although there is *Scale-Invariant* in its title, the features in SIFT are way more powerful than this. They are invariant to image rotation, illumination change, and partially invariant to 3D camera viewpoint.
 

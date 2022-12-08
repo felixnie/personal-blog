@@ -13,13 +13,13 @@ Unlike the black box models in machine learning, traditional CV algorithms are m
 
 The EE5731 Visual Computing module provides us with knowledge on topics including:
 
-1. [Viola-Jones Face Detection Algorithm]({{ site.baseurl }}{% link modules/_posts/2020-12-03-ee5731-1-viola-jones-face-detection-algorithm.md %}) <span style="color:red">**Finished**</span>
+1. [Viola-Jones Face Detection Algorithm]({{ site.baseurl }}{% link modules/_posts/2021-05-03-ee5731-1-viola-jones-face-detection-algorithm.md %}) <span style="color:red">**Finished**</span>
    1. Feature Extraction: Haar-like Features
    2. Fasten Convolution Process: Integral Image
    3. Feature Selection: AdaBoost
    4. Fasten Classification: Cascade Classifier
 2. Histogram of Oriented Gradients (HOG) Features and Human Detection
-3. [Scale Invariant Feature Transform (SIFT) Algorithm and Image Stitching]({{ site.baseurl }}{% link modules/_posts/2020-12-04-ee5731-2-panoramic-image-stitching.md %}) <span style="color:blue">**Under Construction**</span>
+3. [Scale Invariant Feature Transform (SIFT) Algorithm and Image Stitching]({{ site.baseurl }}{% link modules/_posts/2021-05-04-ee5731-2-panoramic-image-stitching.md %}) <span style="color:blue">**Under Construction**</span>
    1. Scale Space Extrema: Difference of Gaussian (DoG)
    2. Keypoint Localization: Taylor Expansion
    3. Orientation Assignment
