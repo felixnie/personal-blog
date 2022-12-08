@@ -7,24 +7,57 @@ hide_description: true
 sitemap: false
 ---
 
-# Reinforcement Learning
+## Personal Projects
 
-## Policy Gradient Theories
+1. [DIY CNC Laser Engraver]({{ site.baseurl }}{% link projects/_posts/2020-06-14-cnc-laser-engraver.md %}) <span style="color:blue">**Gallery**</span>
 
-1. [Notes on Policy Gradient Methods]({{ site.baseurl }}{% link projects/_posts/2021-02-07-notes-on-policy-gradient-methods.md %}) <span style="color:blue">**Under Review**</span>
+[![Full-width image](/assets/img/img-projects/05-00.png)]({{ site.baseurl }}{% link projects/_posts/2020-06-14-cnc-laser-engraver.md %})
 
-## Policy Gradient Algorithms
-1. DQN - [Human-level Control Through Deep Reinforcement Learning (Nature2015)]({{ site.baseurl }}{% link papers/_posts/2021-01-27-human-level-control-through-deep-reinforcement-learning.md %}) <span style="color:blue">**Under Review**</span>
-2. DQN - [Playing Atari with Deep Reinforcement Learning (NIPS2013)]({{ site.baseurl }}{% link papers/_posts/2021-01-31-playing-atari-with-deep-reinforcement-learning.md %}) <span style="color:blue">**Under Review**</span>
-3. DPG - [Deterministic Policy Gradient Algorithms (ICML2014)]({{ site.baseurl }}{% link papers/_posts/2021-01-31-deterministic-policy-gradient-algorithms.md %}) <span style="color:blue">**Under Review**</span>
-4. DDPG - [Continuous Control with Deep Reinforcement Learning (ICLR2016)]({{ site.baseurl }}{% link papers/_posts/2021-02-07-continuous-control-with-deep-reinforcement-learning.md %}) <span style="color:blue">**Under Review**</span>
-5. A3C - Asynchronous Methods for Deep Reinforcement Learning
-6. PPO - Proximal Policy Optimization Algorithms
-7. TD3 - Addressing Function Approximation Error in Actor-Critic Methods
-8. SAC - Soft Actor-Critic Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor
-9. HER - Hindsight Experience Replay
-10. HER - Multi-Goal Reinforcement Learning Challenging Robotics Environments and Request for Research
+March 2015 at Fuzhou No.1 High School, Fuzhou
+{:.figcaption}
 
-# UAV Collision Avoidance
-1. Comparison of Deep Reinforcement Learning Policies to Formal Methods for Moving Obstacle Avoidance
-2. Reinforcement Learning for Autonomous Driving Obstacle Avoidance using LIDAR
+{:start="2"}
+2. [RF Chatter based on nRF24L01]({{ site.baseurl }}{% link projects/_posts/2020-06-15-rf-chatter.md %}) <span style="color:blue">**Gallery**</span>
+
+[![Full-width image](/assets/img/img-projects/02-00.png)]({{ site.baseurl }}{% link projects/_posts/2020-06-15-rf-chatter.md %})
+
+December 2016 at UESTC, Chengdu
+{:.figcaption}
+
+{:start="3"}
+3. [Antenna Rotator]({{ site.baseurl }}{% link projects/_posts/2020-06-15-antenna-rotator.md %}) <span style="color:blue">**Gallery**</span>
+
+[![Full-width image](/assets/img/img-projects/06-00.png)]({{ site.baseurl }}{% link projects/_posts/2020-06-15-antenna-rotator.md %})
+
+October 2019 at UESTC, Chengdu
+{:.figcaption}
+
+## Electronic Design Competitions
+
+1. [Remote Frequency Response Analyzer]({{ site.baseurl }}{% link projects/_posts/2020-06-16-remote-fr-analyzer.md %}) <span style="color:blue">**Gallery**</span>
+
+[![Full-width image](/assets/img/img-projects/01-00.png)]({{ site.baseurl }}{% link projects/_posts/2020-06-16-remote-fr-analyzer.md %})
+August 2017 at UESTC, Chengdu
+{:.figcaption}
+
+{:start="2"}
+2. [Smart Home Monitor with Gesture Recognition]({{ site.baseurl }}{% link projects/_posts/2020-06-17-smart-home-monitor.md %}) <span style="color:blue">**Gallery**</span>
+
+[![Full-width image](/assets/img/img-projects/03-00.png)]({{ site.baseurl }}{% link projects/_posts/2020-06-17-smart-home-monitor.md %})
+
+March 2017 at UESTC, Chengdu
+{:.figcaption}
+
+{:start="3"}
+3. [Portable Scientific Calculator based on AVR MCU]({{ site.baseurl }}{% link projects/_posts/2020-06-18-portable-scientific-calculator.md %}) <span style="color:blue">**Gallery**</span>
+
+[![Full-width image](/assets/img/img-projects/04-00.png)]({{ site.baseurl }}{% link projects/_posts/2020-06-18-portable-scientific-calculator.md %})
+
+October 2016 at UESTC, Chengdu
+{:.figcaption}
+
+## UAV Collision Avoidance
+
+1. [Collision Avoidance Playground with OpenAI Gym](https://github.com/felixnie/gym-colavoid)
+
+2. [Notes on Policy Gradient Methods]({{ site.baseurl }}{% link projects/_posts/2021-02-07-notes-on-policy-gradient-methods.md %}) <span style="color:red">**Under Construction**</span>

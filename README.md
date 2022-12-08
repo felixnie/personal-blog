@@ -7,9 +7,11 @@ https://jekyllrb.com/docs/installation/ubuntu/
 
 ### Run Hydejack
 ```
-cd into Hydejack directory
+# cd into Hydejack directory
 bundle install
 bundle exec jekyll serve
+# real-time update
+bundle exec jekyll serve --force-polling
 # if you want to disable some add-on that need subscription
 JEKYLL_ENV=production bundle exec jekyll serve
 # or when building final version
@@ -23,8 +25,8 @@ bundle update jekyll-theme-hydejack
 ```
 
 ### If you're using WSL
-Open in Windows:
 ```
+# open in Explorer
 explorer.exe .
 ```
 
@@ -38,5 +40,3 @@ git remote add origin https://github.com/felixnie/felixnie.github.io.git
 git push -f origin master
 # or try main
 ```
-
-
