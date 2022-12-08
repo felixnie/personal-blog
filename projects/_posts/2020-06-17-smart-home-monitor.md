@@ -3,7 +3,7 @@ layout: post
 title: Remote Frequency Response Analyzer
 description: >
    A small project for a contest, mainly designed by teammate [Hsury](https://kagamiz.com/).
-sitemap: false
+sitemap: true
 ---
 
 ![Full-width image](/assets/img/img-projects/03-01.jfif)

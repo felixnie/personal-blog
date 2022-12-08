@@ -3,7 +3,7 @@ layout: post
 title: Portable Scientific Calculator based on AVR MCU
 description: >
    The first project during undergraduate, designed and manufactured with [Hsury](https://kagamiz.com/) and Ming.
-sitemap: false
+sitemap: true
 ---
 
 ![Full-width image](/assets/img/img-projects/04-01.jfif)

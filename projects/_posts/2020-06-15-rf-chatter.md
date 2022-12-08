@@ -3,7 +3,7 @@ layout: post
 title: RF Chatter based on nRF24L01
 description: >
    Made just for fun. Soldering was done mostly by my talented roommate [BI8CSY](https://space.bilibili.com/233615320/?spm_id_from=333.999.0.0).
-sitemap: false
+sitemap: true
 ---
 
 ![Full-width image](/assets/img/img-projects/02-01.jfif)

@@ -4,7 +4,7 @@ title: Projects🚧
 description: >
   Information merits sharing during projects and assignments.
 hide_description: true
-sitemap: false
+sitemap: true
 ---
 
 ## Personal Projects

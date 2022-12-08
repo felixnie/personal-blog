@@ -3,7 +3,7 @@ layout: post
 title: DIY CNC Laser Engraver
 description: >
    This is a one-man job carried out during the 2nd grade of high school. Just for making engraved gifts for friends.
-sitemap: false
+sitemap: true
 ---
 
 ![Full-width image](/assets/img/img-projects/05-02.jfif)

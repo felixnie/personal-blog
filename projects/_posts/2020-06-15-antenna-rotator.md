@@ -3,7 +3,7 @@ layout: post
 title: Antenna Rotator
 description: >
    A project made with the amateur radio fan [BI8CSY](https://space.bilibili.com/233615320/?spm_id_from=333.999.0.0). Should have been built into a closed-loop automatic rotator but left unfinished halfway.
-sitemap: false
+sitemap: true
 ---
 
 ![Full-width image](https://raw.githubusercontent.com/felixnie/img/master/antenna-rotator-sketch%20(1).png)

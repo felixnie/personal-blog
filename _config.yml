@@ -70,7 +70,7 @@ legal:
     url:               /about/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2021. Host with ❤ by Felix.
+copyright:             © 2022. Host with ❤ by Felix.
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/

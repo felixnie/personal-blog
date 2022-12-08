@@ -3,7 +3,7 @@ layout: post
 title: Remote Frequency Response Analyzer
 description: >
    A project during National Undergraduate Electronic Design Contest, designed and manufactured with [Fu Chunyang](https://www.researchgate.net/profile/Chunyang-Fu) in 4 days & 3 nights.
-sitemap: false
+sitemap: true
 ---
 
 ![Full-width image](/assets/img/img-projects/01-01.jfif)
