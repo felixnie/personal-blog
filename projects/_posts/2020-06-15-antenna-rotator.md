@@ -39,11 +39,6 @@ Azimuth rotation mechanism
 Pitch rotation mechanism
 {:.figcaption}
 
-![Full-width image](/assets/img/img-projects/06-01.jpg)
-
-Connectors for the aluminum profile
-{:.figcaption}
-
 ![Full-width image](https://raw.githubusercontent.com/felixnie/img/master/antenna-rotator%20(11).jpg)
 
 ![Full-width image](https://raw.githubusercontent.com/felixnie/img/master/antenna-rotator%20(3).jpg)
